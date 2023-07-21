@@ -1,116 +1,116 @@
 import { DataTypes, Model, Sequelize } from "sequelize";
-import { Iuser } from "../interfaces/user";
+import { ISalaryInformation } from "../interfaces/salaryInformation";
 
-export function userModel(sequelize: Sequelize) {
-    const User = sequelize.define<Model<Iuser>>(
-        "user",
+export function salaryInformationModel(sequelize: Sequelize) {
+    const SalaryInformation = sequelize.define<Model<ISalaryInformation>>(
+        "salary_information",
         {
-            Employee_ID_Number: {
+            Id: {
                 type: DataTypes.INTEGER,
                 autoIncrement: true,
                 allowNull: false,
                 primaryKey: true,
             },
-            Personal_ID_Number: {
-                type: DataTypes.INTEGER,
-                allowNull: true
-            },
-            First_Name: {
-                type: DataTypes.STRING,
-                allowNull: true
-            },
-            Middle_Name: {
-                type: DataTypes.STRING,
-                allowNull: true
-            },
-            Last_Name: {
-                type: DataTypes.STRING,
-                allowNull: true
-            },
-            Day_of_Birth: {
-                type: DataTypes.INTEGER,
-                allowNull: true
-            },
-            Month_of_Birth: {
-                type: DataTypes.INTEGER,
-                allowNull: true
-            },
-            Year_of_Birth: {
-                type: DataTypes.INTEGER,
-                allowNull: true
-            },
-            Cellular_Phone: {
-                type: DataTypes.INTEGER,
-                allowNull: true
-            },
-            Home_Phone: {
-                type: DataTypes.INTEGER,
-                allowNull: true
-            },
-            City: {
-                type: DataTypes.STRING,
-                allowNull: true
-            },
-            Address: {
-                type: DataTypes.STRING,
-                allowNull: true
-            },
-            Postal_Code: {
-                type: DataTypes.INTEGER,
-                allowNull: true
-            },
-            Qualification: {
-                type: DataTypes.STRING,
-                allowNull: true
-            },
-            Current_Experience: {
-                type: DataTypes.STRING,
-                allowNull: true
-            },
-            Start_Date_Day: {
-                type: DataTypes.INTEGER,
-                allowNull: true
-            },
-            Start_Date_Month: {
-                type: DataTypes.INTEGER,
-                allowNull: true
-            },
-            Start_Date_Year: {
-                type: DataTypes.INTEGER,
-                allowNull: true
-            },
-            End_Date_Day: {
-                type: DataTypes.INTEGER,
-                allowNull: true
-            },
-            End_Date_Month: {
-                type: DataTypes.INTEGER,
-                allowNull: true
-            },
-            End_Date_Year: {
-                type: DataTypes.INTEGER,
-                allowNull: true
-            },
-            Type_of_Employee: {
-                type: DataTypes.STRING,
-                allowNull: true
-            },
-            Gender: {
-                type: DataTypes.STRING,
-                allowNull: true
-            },
-            Marital_Status: {
-                type: DataTypes.STRING,
-                allowNull: true
-            }
 
+            Employee_ID_Number: {
+                type: DataTypes.INTEGER,
+                allowNull: true
+            },
+            Monthly_Salary: {
+                type: DataTypes.INTEGER,
+                allowNull: true
+            },
+            Monthly_Money_Currency: {
+                type: DataTypes.STRING,
+                allowNull: true
+            },
+            monthly_Taxes: {
+                type: DataTypes.INTEGER,
+                allowNull: true
+            },
+            monthly_Deductions: {
+                type: DataTypes.INTEGER,
+                allowNull: true
+            },
+            monthly_Insurances: {
+                type: DataTypes.INTEGER,
+                allowNull: true
+            },
+            ms_From_Date_Day: {
+                type: DataTypes.INTEGER,
+                allowNull: true
+            },
+            ms_From_Date_Month: {
+                type: DataTypes.INTEGER,
+                allowNull: true
+            },
+            ms_From_Date_Year: {
+                type: DataTypes.INTEGER,
+                allowNull: true
+            },
+            ms_To_Date_Day: {
+                type: DataTypes.INTEGER,
+                allowNull: true
+            },
+            ms_To_Date_Month: {
+                type: DataTypes.INTEGER,
+                allowNull: true
+            },
+            ms_To_Date_Year: {
+                type: DataTypes.INTEGER,
+                allowNull: true
+            },
+            Weekly_Salary: {
+                type: DataTypes.INTEGER,
+                allowNull: true
+            },
+            Weekly_Money_Currency: {
+                type: DataTypes.STRING,
+                allowNull: true
+            },
+            weekly_Taxes: {
+                type: DataTypes.INTEGER,
+                allowNull: true
+            },
+            weekly_Deductions: {
+                type: DataTypes.INTEGER,
+                allowNull: true
+            },
+            weekly_Insurances: {
+                type: DataTypes.INTEGER,
+                allowNull: true
+            },
+            ws_From_Date_Day: {
+                type: DataTypes.INTEGER,
+                allowNull: true
+            },
+            ws_From_Date_Month: {
+                type: DataTypes.INTEGER,
+                allowNull: true
+            },
+            ws_From_Date_Year: {
+                type: DataTypes.INTEGER,
+                allowNull: true
+            },
+            ws_To_Date_Day: {
+                type: DataTypes.INTEGER,
+                allowNull: true
+            },
+            ws_To_Date_Month: {
+                type: DataTypes.INTEGER,
+                allowNull: true
+            },
+            ws_To_Date_Year: {
+                type: DataTypes.INTEGER,
+                allowNull: true
+            },
         }, {
-        tableName: "user"
+        tableName: "salary_information"
     }
 
     );
 
 
 
-    return User;
+    return SalaryInformation;
 }

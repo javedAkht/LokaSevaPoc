@@ -13,7 +13,7 @@ export const sequelize = new Sequelize({
 sequelize.authenticate();
 const models = initModels(sequelize);
 // console.log(typeof models)
-// sequelize.sync();
+// sequelize.sync({ force: true });
 
 
 
